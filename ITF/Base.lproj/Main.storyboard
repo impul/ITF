@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MVd-yF-YDp">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MVd-yF-YDp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,196 +40,37 @@
         <scene sceneID="OsZ-L9-R5g">
             <objects>
                 <tableViewController storyboardIdentifier="FacultyVC" id="IbM-Ng-WTt" customClass="FacultyVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="po1-dw-8xk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="po1-dw-8xk">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="ve5-38-Ywm">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="Rti-Jo-mqt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rti-Jo-mqt" id="oVC-rC-quo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cafedraCell" textLabel="5PB-A2-YLi" detailTextLabel="O6Y-Iz-O5u" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="Rti-Jo-mqt">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rti-Jo-mqt" id="oVC-rC-quo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5PB-A2-YLi">
+                                            <rect key="frame" x="15" y="16" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КІ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQt-KZ-CSA">
-                                                    <rect key="frame" x="14" y="10" width="17.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комп'ютерна Інженерія" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-zK-xwn">
-                                                    <rect key="frame" x="15" y="36" width="188.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-rf-OyJ">
-                                                    <rect key="frame" x="343" y="22" width="22" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ytc-rf-OyJ" firstAttribute="centerY" secondItem="oVC-rC-quo" secondAttribute="centerY" id="1Fy-Ye-UNx"/>
-                                                <constraint firstItem="bsU-zK-xwn" firstAttribute="leading" secondItem="oVC-rC-quo" secondAttribute="leading" constant="15" id="5oT-1A-cr6"/>
-                                                <constraint firstItem="bsU-zK-xwn" firstAttribute="top" secondItem="yQt-KZ-CSA" secondAttribute="bottom" constant="5" id="8hX-ZI-HTa"/>
-                                                <constraint firstItem="yQt-KZ-CSA" firstAttribute="leading" secondItem="oVC-rC-quo" secondAttribute="leading" constant="14" id="bjB-Xn-8GG"/>
-                                                <constraint firstAttribute="trailing" secondItem="ytc-rf-OyJ" secondAttribute="trailing" constant="10" id="pwV-sz-mRB"/>
-                                                <constraint firstItem="yQt-KZ-CSA" firstAttribute="top" secondItem="oVC-rC-quo" secondAttribute="top" constant="10" id="uda-uz-X0D"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="4si-K9-GbT">
-                                        <rect key="frame" x="0.0" y="66" width="375" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4si-K9-GbT" id="x3q-ww-g5g">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O6Y-Iz-O5u">
+                                            <rect key="frame" x="15" y="36.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МБГ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSw-Sd-zRU">
-                                                    <rect key="frame" x="14" y="10" width="37.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комп'ютерна Інженерія" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUJ-oA-ts6">
-                                                    <rect key="frame" x="15" y="36" width="188.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Rv-O9z">
-                                                    <rect key="frame" x="343" y="22" width="22" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2O0-Rv-O9z" firstAttribute="centerY" secondItem="x3q-ww-g5g" secondAttribute="centerY" id="13A-xs-HLs"/>
-                                                <constraint firstItem="gSw-Sd-zRU" firstAttribute="leading" secondItem="x3q-ww-g5g" secondAttribute="leading" constant="14" id="23b-ri-xTJ"/>
-                                                <constraint firstItem="BUJ-oA-ts6" firstAttribute="leading" secondItem="x3q-ww-g5g" secondAttribute="leading" constant="15" id="70a-7c-hIn"/>
-                                                <constraint firstItem="gSw-Sd-zRU" firstAttribute="top" secondItem="x3q-ww-g5g" secondAttribute="top" constant="10" id="7hK-i2-nbI"/>
-                                                <constraint firstAttribute="trailing" secondItem="2O0-Rv-O9z" secondAttribute="trailing" constant="10" id="SKs-ku-m62"/>
-                                                <constraint firstItem="BUJ-oA-ts6" firstAttribute="top" secondItem="gSw-Sd-zRU" secondAttribute="bottom" constant="5" id="bzx-Qr-2qc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="m7x-t4-g6z">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m7x-t4-g6z" id="usi-0e-oY6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КІ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn2-Kx-68E">
-                                                    <rect key="frame" x="14" y="10" width="17.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комп'ютерна Інженерія" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-KW-FQB">
-                                                    <rect key="frame" x="15" y="36" width="188.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-aD-ELt">
-                                                    <rect key="frame" x="343" y="22" width="22" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="iL0-KW-FQB" firstAttribute="leading" secondItem="usi-0e-oY6" secondAttribute="leading" constant="15" id="22A-m9-l7N"/>
-                                                <constraint firstItem="dn2-Kx-68E" firstAttribute="leading" secondItem="usi-0e-oY6" secondAttribute="leading" constant="14" id="5sQ-A5-3Pd"/>
-                                                <constraint firstItem="iL0-KW-FQB" firstAttribute="top" secondItem="dn2-Kx-68E" secondAttribute="bottom" constant="5" id="Exe-fE-qFK"/>
-                                                <constraint firstItem="dn2-Kx-68E" firstAttribute="top" secondItem="usi-0e-oY6" secondAttribute="top" constant="10" id="Xyx-jR-Zu9"/>
-                                                <constraint firstAttribute="trailing" secondItem="WF4-aD-ELt" secondAttribute="trailing" constant="10" id="qW5-X0-DWP"/>
-                                                <constraint firstItem="WF4-aD-ELt" firstAttribute="centerY" secondItem="usi-0e-oY6" secondAttribute="centerY" id="wRn-Fe-SSM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="LCt-C7-lHG">
-                                        <rect key="frame" x="0.0" y="198" width="375" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LCt-C7-lHG" id="ZVT-lk-0kn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КІ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-O9-4uT">
-                                                    <rect key="frame" x="14" y="10" width="17.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комп'ютерна Інженерія" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uP4-8S-2WG">
-                                                    <rect key="frame" x="15" y="36" width="188.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DZ-dB-gI4">
-                                                    <rect key="frame" x="343" y="22" width="22" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NR4-O9-4uT" firstAttribute="top" secondItem="ZVT-lk-0kn" secondAttribute="top" constant="10" id="04m-0D-0Qi"/>
-                                                <constraint firstAttribute="trailing" secondItem="8DZ-dB-gI4" secondAttribute="trailing" constant="10" id="0ro-lg-RfE"/>
-                                                <constraint firstItem="8DZ-dB-gI4" firstAttribute="centerY" secondItem="ZVT-lk-0kn" secondAttribute="centerY" id="0zl-IX-UpP"/>
-                                                <constraint firstItem="uP4-8S-2WG" firstAttribute="leading" secondItem="ZVT-lk-0kn" secondAttribute="leading" constant="15" id="7C5-KD-Hgi"/>
-                                                <constraint firstItem="uP4-8S-2WG" firstAttribute="top" secondItem="NR4-O9-4uT" secondAttribute="bottom" constant="5" id="axe-xx-zLS"/>
-                                                <constraint firstItem="NR4-O9-4uT" firstAttribute="leading" secondItem="ZVT-lk-0kn" secondAttribute="leading" constant="14" id="wNy-kq-Sra"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="fjf-IS-0kN">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fjf-IS-0kN" id="m65-QS-fJJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КІ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-Ra-IQa">
-                                                    <rect key="frame" x="14" y="10" width="17.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комп'ютерна Інженерія" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-xK-NUx">
-                                                    <rect key="frame" x="15" y="36" width="188.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-LK-EMo">
-                                                    <rect key="frame" x="343" y="22" width="22" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="uPc-LK-EMo" firstAttribute="centerY" secondItem="m65-QS-fJJ" secondAttribute="centerY" id="HLF-Xb-uR7"/>
-                                                <constraint firstAttribute="trailing" secondItem="uPc-LK-EMo" secondAttribute="trailing" constant="10" id="VUB-ML-AoP"/>
-                                                <constraint firstItem="2eY-xK-NUx" firstAttribute="top" secondItem="0R4-Ra-IQa" secondAttribute="bottom" constant="5" id="XK0-on-oR9"/>
-                                                <constraint firstItem="2eY-xK-NUx" firstAttribute="leading" secondItem="m65-QS-fJJ" secondAttribute="leading" constant="15" id="XPF-uG-Cf3"/>
-                                                <constraint firstItem="0R4-Ra-IQa" firstAttribute="top" secondItem="m65-QS-fJJ" secondAttribute="top" constant="10" id="hco-pr-swS"/>
-                                                <constraint firstItem="0R4-Ra-IQa" firstAttribute="leading" secondItem="m65-QS-fJJ" secondAttribute="leading" constant="14" id="jYD-sK-wtQ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="IbM-Ng-WTt" id="hmq-O1-GPB"/>
                             <outlet property="delegate" destination="IbM-Ng-WTt" id="ylV-22-UP6"/>

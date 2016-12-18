@@ -13,9 +13,9 @@
 		2A35BC001DFF7D7800EBA69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BBFE1DFF7D7800EBA69A /* Main.storyboard */; };
 		2A35BC021DFF7D7800EBA69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BC011DFF7D7800EBA69A /* Assets.xcassets */; };
 		2A35BC051DFF7D7800EBA69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BC031DFF7D7800EBA69A /* LaunchScreen.storyboard */; };
-		2A35BC101DFF82AC00EBA69A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BC0F1DFF82AC00EBA69A /* GoogleService-Info.plist */; };
 		2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC171DFF83FC00EBA69A /* FacultyVC.m */; };
 		2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC1B1DFF867200EBA69A /* FireManager.m */; };
+		848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848516F51E070F3A0085E822 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +27,13 @@
 		2A35BC011DFF7D7800EBA69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A35BC041DFF7D7800EBA69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A35BC061DFF7D7800EBA69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A35BC0F1DFF82AC00EBA69A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A35BC161DFF83FC00EBA69A /* FacultyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacultyVC.h; path = FacultyVC/FacultyVC.h; sourceTree = "<group>"; };
 		2A35BC171DFF83FC00EBA69A /* FacultyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacultyVC.m; path = FacultyVC/FacultyVC.m; sourceTree = "<group>"; };
 		2A35BC1A1DFF867200EBA69A /* FireManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireManager.h; path = FireManager/FireManager.h; sourceTree = "<group>"; };
 		2A35BC1B1DFF867200EBA69A /* FireManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireManager.m; path = FireManager/FireManager.m; sourceTree = "<group>"; };
 		3127FD381C2DBC8A8B5C9E03 /* Pods-ITF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.debug.xcconfig"; sourceTree = "<group>"; };
 		61FDAAEECF39AFFB03B4E77E /* Pods-ITF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.release.xcconfig"; sourceTree = "<group>"; };
+		848516F51E070F3A0085E822 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE4A86EC83D34692DF2F23D8 /* libPods-ITF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ITF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 				2A35BC011DFF7D7800EBA69A /* Assets.xcassets */,
 				2A35BC031DFF7D7800EBA69A /* LaunchScreen.storyboard */,
 				2A35BC061DFF7D7800EBA69A /* Info.plist */,
-				2A35BC0F1DFF82AC00EBA69A /* GoogleService-Info.plist */,
+				848516F51E070F3A0085E822 /* GoogleService-Info.plist */,
 				2A35BBF61DFF7D7800EBA69A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A35BC051DFF7D7800EBA69A /* LaunchScreen.storyboard in Resources */,
-				2A35BC101DFF82AC00EBA69A /* GoogleService-Info.plist in Resources */,
+				848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */,
 				2A35BC021DFF7D7800EBA69A /* Assets.xcassets in Resources */,
 				2A35BC001DFF7D7800EBA69A /* Main.storyboard in Resources */,
 			);
@@ -399,6 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = URR6XT6758;
 				INFOPLIST_FILE = ITF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Imp.ITF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = URR6XT6758;
 				INFOPLIST_FILE = ITF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Imp.ITF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
