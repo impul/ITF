@@ -16,6 +16,7 @@
 		2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC171DFF83FC00EBA69A /* FacultyVC.m */; };
 		2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC1B1DFF867200EBA69A /* FireManager.m */; };
 		848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848516F51E070F3A0085E822 /* GoogleService-Info.plist */; };
+		84F064DD1E07310D00CD67AB /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		3127FD381C2DBC8A8B5C9E03 /* Pods-ITF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.debug.xcconfig"; sourceTree = "<group>"; };
 		61FDAAEECF39AFFB03B4E77E /* Pods-ITF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.release.xcconfig"; sourceTree = "<group>"; };
 		848516F51E070F3A0085E822 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84F064DB1E07310D00CD67AB /* CoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoursesTableViewController.h; path = CoursesVC/CoursesTableViewController.h; sourceTree = "<group>"; };
+		84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoursesTableViewController.m; path = CoursesVC/CoursesTableViewController.m; sourceTree = "<group>"; };
 		DE4A86EC83D34692DF2F23D8 /* libPods-ITF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ITF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +122,7 @@
 		2A35BC111DFF834000EBA69A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84F064DA1E0730CD00CD67AB /* CoursesVC */,
 				2A35BC121DFF835800EBA69A /* FacultyVC */,
 			);
 			name = ViewControllers;
@@ -140,6 +144,15 @@
 				2A35BC1B1DFF867200EBA69A /* FireManager.m */,
 			);
 			name = FireManager;
+			sourceTree = "<group>";
+		};
+		84F064DA1E0730CD00CD67AB /* CoursesVC */ = {
+			isa = PBXGroup;
+			children = (
+				84F064DB1E07310D00CD67AB /* CoursesTableViewController.h */,
+				84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */,
+			);
+			name = CoursesVC;
 			sourceTree = "<group>";
 		};
 		B17E283C23341B23C65CA6E7 /* Pods */ = {
@@ -276,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A35BBFA1DFF7D7800EBA69A /* AppDelegate.m in Sources */,
+				84F064DD1E07310D00CD67AB /* CoursesTableViewController.m in Sources */,
 				2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */,
 				2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */,
 				2A35BBF71DFF7D7800EBA69A /* main.m in Sources */,
