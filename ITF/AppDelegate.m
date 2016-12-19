@@ -17,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
         [FIRApp configure];
         return YES;
 }

@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.fir = [[FIRDatabase database] reference];
     
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -56,10 +55,10 @@
 #pragma mark - Private
 
 -(void)generateUsers {
-    int count = arc4random()%30;
     for (int j = 0 ; j < 5; j++) {
+        int count = arc4random()%30;
         for (int i = 0 ; i <count ; i++) {
-            [[[[[[self.fir child:@"ITF"] child:@"TM"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j+1]]childByAutoId] setValue:@{@"Name":[self getRandName]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+            [[[[[[self.fir child:@"ITF"] child:@"ES"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j+1]]childByAutoId] setValue:@{@"Name":[self getRandName]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
                 
             }];
         }

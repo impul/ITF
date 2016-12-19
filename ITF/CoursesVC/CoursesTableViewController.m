@@ -10,7 +10,7 @@
 
 @interface CoursesTableViewController ()
 
-@property (strong ,nonatomic) NSDictionary *courses;
+@property (strong ,nonatomic) NSMutableArray *courses;
 
 @end
 
@@ -37,14 +37,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"courseCell" forIndexPath:indexPath];
     
-    cell.textLabel.text  = [[self.courses allValues] objectA
+    cell.textLabel.text  = [NSString stringWithFormat:@"%lu course",indexPath.row+1];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", ((NSDictionary *)self.courses[indexPath.row]).count];
     return cell;
 }
 
 #pragma mark - SetupController
 
 -(void)setupControllerWithCourses:(NSDictionary *)course {
-    self.courses = [course valueForKey:@"Course"];
+    self.navigationItem.title = [course valueForKey:@"Name"];
+    [self.navigationController.navigationBar pushNavigationItem:self.navigationItem animated:NO];
+    self.courses = [NSMutableArray new];
+    for (id obj in [course valueForKey:@"Courses"]) {
+        if (![obj isKindOfClass:[NSNull class]])
+        {
+            [self.courses addObject:obj];
+        }
+    }
     [self.tableView reloadData];
 }
 
