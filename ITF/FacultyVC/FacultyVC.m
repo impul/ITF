@@ -24,16 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fir = [[FIRDatabase database] reference];
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     FIRDatabaseReference *scoresRef = [[FIRDatabase database] referenceWithPath:@"ITF"];
     [scoresRef keepSynced:YES];
-    
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            self.ITFdict = [snapshot.value objectForKey:@"ITF"];
-        [self setModules];
+         self.ITFdict = [snapshot.value objectForKey:@"ITF"];
         [self.tableView reloadData];
     }];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 #pragma mark - TableView
@@ -62,7 +65,7 @@
     for (int j = 0 ; j < 5; j++) {
         int count = arc4random()%30;
         for (int i = 0 ; i <count ; i++) {
-            [[[[[[self.fir child:@"ITF"] child:@"ES"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j+1]]childByAutoId] setValue:@{@"Name":[self getRandName]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+            [[[[[[self.fir child:@"ITF"] child:@"TM"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j+1]]childByAutoId] setValue:@{@"Name":[self getRandName]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
                 
             }];
         }
@@ -70,17 +73,26 @@
 }
 
 -(void)setModules {
-        for (int j = 1; j < 5 ; j++) {
-            NSArray *allStudentInCourse = [[[[self.ITFdict valueForKey:@"ES"] valueForKey:@"Courses"] objectAtIndex:j] allKeys];
-            for (int t = 0 ; t< 8; t++) {
+            NSArray *allStudentInCourse = [[[[self.ITFdict valueForKey:@"ES"] valueForKey:@"Courses"] objectAtIndex:5] allKeys];
                 NSString *dis = [self getRandomDis];
+                NSString *dis1 = [self getRandomDis];
+                NSString *dis2 = [self getRandomDis];
+                NSString *dis3 = [self getRandomDis];
+                NSString *dis4 = [self getRandomDis];
+                NSString *dis5 = [self getRandomDis];
+                NSString *dis6 = [self getRandomDis];
+    NSString *dis7 = [self getRandomDis];
                 for (int z = 0 ; z < allStudentInCourse.count; z++) {
-                    [[[[[[self.fir child:@"ITF"] child:@"ES"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j]]child:allStudentInCourse[z]] setValue:@{dis:[NSString stringWithFormat:@"%d",arc4random()%5]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+                    NSString *stud = allStudentInCourse[z];
+                    NSString *course = [NSString stringWithFormat:@"5"];
+                    [[[[[[[self.fir child:@"ITF"] child:@"ES"] child:@"Courses"] child:course]child:stud] child:@"Modules"] setValue:@{dis:[self getRandRank],dis1:[self getRandRank],dis2:[self getRandRank],dis3:[self getRandRank],dis4:[self getRandRank],dis5:[self getRandRank],dis6:[self getRandRank],dis7:[self getRandRank]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
                         
                     }];
                 }
-            }
-        }
+}
+-(NSString *)getRandRank {
+    NSArray  *string = @[@"2",@"3",@"4",@"5"];
+    return string[arc4random()%4];
 }
 
 -(NSString *)getRandName {
@@ -89,7 +101,7 @@
 }
 
 -(NSString *)getRandomDis {
-    NSArray *disArr =  @[@"Мат. аналіз",@"ООП",@"ОБД",@"ТІК",@"Історія",@"Економіка",@"АМО",@"МОА",@"C++",@"C#",@"Системне програмування",@"Опір матеріалів",@"Фізика",@"Електотехніка",@"Дискретна математика",@"Хімія",@"ТКМ",@"Структури даних та алгоритми",@"Матеріалознавство",@"Теоретична механіка",@"Архітектура будівель і споруд",@"Метрологія",@"Комп'ютерні системи",@"ІПЗ",@"Архітектура ПЗ",@"ОС",@"ТАК",@"Теорія електричних і магнітних кіл",@"ОКДМ",@"Електромангітна техніка",@"Буд механіка",@"Тепло газо постачання"];
+    NSArray *disArr =  @[@"Мат аналіз",@"ООП",@"ОБД",@"ТІК",@"Історія",@"Економіка",@"АМО",@"МОА",@"C plus plus",@"C Sharp",@"Системне програмування",@"Опір матеріалів",@"Фізика",@"Електотехніка",@"Дискретна математика",@"Хімія",@"ТКМ",@"Структури даних та алгоритми",@"Матеріалознавство",@"Теоретична механіка",@"Архітектура будівель і споруд",@"Метрологія",@"Комп'ютерні системи",@"ІПЗ",@"Архітектура ПЗ",@"ОС",@"ТАК",@"Теорія електричних і магнітних кіл",@"ОКДМ",@"Електромангітна техніка",@"Буд механіка",@"Тепло газо постачання"];
     return disArr[arc4random()%disArr.count];
 }
 
