@@ -7,6 +7,7 @@
 //
 
 #import "CoursesTableViewController.h"
+#import "StudentsVC.h"
 
 @interface CoursesTableViewController ()
 
@@ -40,6 +41,12 @@
     cell.textLabel.text  = [NSString stringWithFormat:@"%lu course",indexPath.row+1];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", ((NSDictionary *)self.courses[indexPath.row]).count];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    StudentsVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentsVC"];
+    vc.studentDict = [self.courses objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - SetupController

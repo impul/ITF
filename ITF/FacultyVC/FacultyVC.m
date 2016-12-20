@@ -25,8 +25,12 @@
     [super viewDidLoad];
     self.fir = [[FIRDatabase database] reference];
     
+    FIRDatabaseReference *scoresRef = [[FIRDatabase database] referenceWithPath:@"ITF"];
+    [scoresRef keepSynced:YES];
+    
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        self.ITFdict = [snapshot.value objectForKey:@"ITF"];
+            self.ITFdict = [snapshot.value objectForKey:@"ITF"];
+        [self setModules];
         [self.tableView reloadData];
     }];
     
@@ -65,9 +69,29 @@
     }
 }
 
+-(void)setModules {
+        for (int j = 1; j < 5 ; j++) {
+            NSArray *allStudentInCourse = [[[[self.ITFdict valueForKey:@"ES"] valueForKey:@"Courses"] objectAtIndex:j] allKeys];
+            for (int t = 0 ; t< 8; t++) {
+                NSString *dis = [self getRandomDis];
+                for (int z = 0 ; z < allStudentInCourse.count; z++) {
+                    [[[[[[self.fir child:@"ITF"] child:@"ES"] child:@"Courses"] child:[NSString stringWithFormat:@"%d",j]]child:allStudentInCourse[z]] setValue:@{dis:[NSString stringWithFormat:@"%d",arc4random()%5]} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+                        
+                    }];
+                }
+            }
+        }
+}
+
 -(NSString *)getRandName {
     NSArray *surNameArray = @[@"Abrahamovsky",@"Adamchuk",@"Andreichenko",@"Andriychuk",@"Andreichyn",@"Andreikiv",@"Andreiko",@"Andresyuk",@"Andrichuk",@"Andriyenko",@"Androshchuk",@"Andrukh",@"Andruko",@"Andruntsiv",@"Andrusenko",@"Andrushchenko",@"Andrushkiv",@"Andrushko",@"Andrusiv",@"Andrusyak",@"Andrusyshyn",@"Antonenko",@"Antoniw",@"Artyuschenko",@"Avramenko",@"Archipenko",@"Babiak",@"Bakaj",@"Balanchuk",@"Barabash",@"Belenko",@"Belovol",@"Bilokhatniuk",@"Bohatenko",@"Bondarenko",@"Boreckyi",@"Boyko",@"Brutka",@"Bublik",@"Bulhakow",@"Burgos",@"Bzovsky",@"Vann",@"Veremchuk",@"Vershigora",@"Vovk",@"Vynnychenko",@"Voitenko",@"Voloshyn",@"Vyhovsky",@"Vasilchuk",@"Harasemchuk",@"Halyckyj",@"Holub",@"Hordiyenko",@"Hotopylo",@"Huba",@"Hubenko",@"Hulyahrotsky",@"Hrytsenko",@"Hryshchuk",@"Holowaty",@"Hycha",@"Gogol",@"Gleba",@"Galey",@"Goraya",@"Gulka",@"Gura",@"Gurka",@"Glushenko",@"Gryglewicz",@"Dolouda",@"Danilenko",@"Dobryivechir",@"Doroshenko",@"Evanishyn",@"Ewaschuk",@"Yehorenko",@"Yelenyuk",@"Yeliashkevych",@"Yelyuk",@"Yevdokymenko",@"Yevtukh",@"Yevtushenko",@"Yevtushok",@"Yecoshenko",@"Zherdev",@"Yakimchuk",@"Yarema",@"Ivanenko",@"Yiranek",@"Yovenko",@"Kalashnik",@"Karaszkewycz",@"Karwatsky",@"Katyuk",@"Klimenko",@"Kluka",@"Kobevko",@"Korneluk",@"Kosh",@"Koshla",@"Kovalenko",@"Kovalchick",@"Kovalchuk",@"Kozachenko",@"Kozoriz",@"Kravets",@"Kryvobok",@"Kryvonis",@"Kryvoruchko",@"KrylenkoKudleychuk",@"Koziy",@"Koltasz",@"Koltyk",@"Lazarenko",@"Lukyanenko",@"Lukashenko",@"Leonchuk",@"Liski",@"Loboda",@"Lyakh",@"Ladanchuk",@"Makarenko",@"Mowczan",@"Mandyczewski",@"Marmurchuk",@"Maslak",@"Miroshnychenko",@"Motruk",@"Maryniuk",@"Mykhaylyk",@"Nazarenko",@"Nazdratenko"];
     return [[surNameArray[arc4random()%surNameArray.count] stringByAppendingString:@" "] stringByAppendingString:surNameArray[arc4random()%surNameArray.count]];
 }
+
+-(NSString *)getRandomDis {
+    NSArray *disArr =  @[@"Мат. аналіз",@"ООП",@"ОБД",@"ТІК",@"Історія",@"Економіка",@"АМО",@"МОА",@"C++",@"C#",@"Системне програмування",@"Опір матеріалів",@"Фізика",@"Електотехніка",@"Дискретна математика",@"Хімія",@"ТКМ",@"Структури даних та алгоритми",@"Матеріалознавство",@"Теоретична механіка",@"Архітектура будівель і споруд",@"Метрологія",@"Комп'ютерні системи",@"ІПЗ",@"Архітектура ПЗ",@"ОС",@"ТАК",@"Теорія електричних і магнітних кіл",@"ОКДМ",@"Електромангітна техніка",@"Буд механіка",@"Тепло газо постачання"];
+    return disArr[arc4random()%disArr.count];
+}
+
 
 @end
