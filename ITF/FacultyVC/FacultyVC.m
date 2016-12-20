@@ -30,7 +30,6 @@
     
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             self.ITFdict = [snapshot.value objectForKey:@"ITF"];
-        [self setModules];
         [self.tableView reloadData];
     }];
     
