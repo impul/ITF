@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentsVC : UITableViewController
-@property (strong , nonatomic) NSDictionary *studentDict;
+-(void)setupControllerWithDict:(NSDictionary *)dict andIndex:(NSInteger)index;
 @end

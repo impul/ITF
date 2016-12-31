@@ -45,7 +45,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     StudentsVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentsVC"];
-    vc.studentDict = [self.courses objectAtIndex:indexPath.row];
+    [vc setupControllerWithDict:self.courses[indexPath.row] andIndex:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
