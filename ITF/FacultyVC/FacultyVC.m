@@ -27,6 +27,7 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     FIRDatabaseReference *scoresRef = [[FIRDatabase database] referenceWithPath:@"ITF"];
     [scoresRef keepSynced:YES];
+
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
          self.ITFdict = [snapshot.value objectForKey:@"ITF"];
         [self.tableView reloadData];

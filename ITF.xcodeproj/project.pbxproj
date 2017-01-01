@@ -16,6 +16,7 @@
 		2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC171DFF83FC00EBA69A /* FacultyVC.m */; };
 		2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC1B1DFF867200EBA69A /* FireManager.m */; };
 		2A7E2E901E09EA3000D4DAD0 /* StartScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E2E8F1E09EA3000D4DAD0 /* StartScreen.m */; };
+		2ABDB4C41E1850D2000D58C2 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4C31E1850D2000D58C2 /* LoginVC.m */; };
 		8440EAB11E0879D700D3E169 /* StudentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAB01E0879D700D3E169 /* StudentsVC.m */; };
 		8440EAB51E09264400D3E169 /* StudentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAB41E09264400D3E169 /* StudentDetailVC.m */; };
 		848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848516F51E070F3A0085E822 /* GoogleService-Info.plist */; };
@@ -37,6 +38,8 @@
 		2A35BC1B1DFF867200EBA69A /* FireManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireManager.m; path = FireManager/FireManager.m; sourceTree = "<group>"; };
 		2A7E2E8E1E09EA3000D4DAD0 /* StartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreen.h; sourceTree = "<group>"; };
 		2A7E2E8F1E09EA3000D4DAD0 /* StartScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreen.m; sourceTree = "<group>"; };
+		2ABDB4C21E1850D2000D58C2 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = LoginVC/LoginVC.h; sourceTree = "<group>"; };
+		2ABDB4C31E1850D2000D58C2 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = LoginVC/LoginVC.m; sourceTree = "<group>"; };
 		3127FD381C2DBC8A8B5C9E03 /* Pods-ITF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.debug.xcconfig"; sourceTree = "<group>"; };
 		61FDAAEECF39AFFB03B4E77E /* Pods-ITF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.release.xcconfig"; sourceTree = "<group>"; };
 		8440EAAF1E0879D700D3E169 /* StudentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentsVC.h; path = StudentsVC/StudentsVC.h; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		2A35BC111DFF834000EBA69A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2ABDB4C11E1850B8000D58C2 /* LoginVC */,
 				2A7E2E8C1E09E8F000D4DAD0 /* StartScreen */,
 				8440EAB21E09262100D3E169 /* StudentDetailVC */,
 				8440EAAE1E0879BA00D3E169 /* StudentsVC */,
@@ -165,6 +169,15 @@
 				2A7E2E8F1E09EA3000D4DAD0 /* StartScreen.m */,
 			);
 			name = StartScreen;
+			sourceTree = "<group>";
+		};
+		2ABDB4C11E1850B8000D58C2 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				2ABDB4C21E1850D2000D58C2 /* LoginVC.h */,
+				2ABDB4C31E1850D2000D58C2 /* LoginVC.m */,
+			);
+			name = LoginVC;
 			sourceTree = "<group>";
 		};
 		8440EAAE1E0879BA00D3E169 /* StudentsVC */ = {
@@ -329,6 +342,7 @@
 			files = (
 				8440EAB51E09264400D3E169 /* StudentDetailVC.m in Sources */,
 				2A35BBFA1DFF7D7800EBA69A /* AppDelegate.m in Sources */,
+				2ABDB4C41E1850D2000D58C2 /* LoginVC.m in Sources */,
 				84F064DD1E07310D00CD67AB /* CoursesTableViewController.m in Sources */,
 				8440EAB11E0879D700D3E169 /* StudentsVC.m in Sources */,
 				2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */,
