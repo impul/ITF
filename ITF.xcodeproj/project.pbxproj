@@ -8,41 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		2754AF5FF4AEE585FB3BD796 /* libPods-ITF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A86EC83D34692DF2F23D8 /* libPods-ITF.a */; };
-		2A35BBF71DFF7D7800EBA69A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BBF61DFF7D7800EBA69A /* main.m */; };
-		2A35BBFA1DFF7D7800EBA69A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BBF91DFF7D7800EBA69A /* AppDelegate.m */; };
 		2A35BC001DFF7D7800EBA69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BBFE1DFF7D7800EBA69A /* Main.storyboard */; };
 		2A35BC021DFF7D7800EBA69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BC011DFF7D7800EBA69A /* Assets.xcassets */; };
 		2A35BC051DFF7D7800EBA69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A35BC031DFF7D7800EBA69A /* LaunchScreen.storyboard */; };
-		2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC171DFF83FC00EBA69A /* FacultyVC.m */; };
-		2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35BC1B1DFF867200EBA69A /* FireManager.m */; };
-		8440EAB11E0879D700D3E169 /* StudentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAB01E0879D700D3E169 /* StudentsVC.m */; };
-		8440EAB51E09264400D3E169 /* StudentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAB41E09264400D3E169 /* StudentDetailVC.m */; };
-		848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848516F51E070F3A0085E822 /* GoogleService-Info.plist */; };
-		84F064DD1E07310D00CD67AB /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */; };
+		84CEFB301E1A935C002F3182 /* StartScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB201E1A935C002F3182 /* StartScreen.m */; };
+		84CEFB311E1A935C002F3182 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB231E1A935C002F3182 /* LoginVC.m */; };
+		84CEFB321E1A935C002F3182 /* FacultyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB261E1A935C002F3182 /* FacultyVC.m */; };
+		84CEFB331E1A935C002F3182 /* StudentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB291E1A935C002F3182 /* StudentDetailVC.m */; };
+		84CEFB341E1A935C002F3182 /* StudentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB2C1E1A935C002F3182 /* StudentsVC.m */; };
+		84CEFB351E1A935C002F3182 /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB2F1E1A935C002F3182 /* CoursesTableViewController.m */; };
+		84CEFB3C1E1A9381002F3182 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB371E1A9381002F3182 /* AppDelegate.m */; };
+		84CEFB3D1E1A9381002F3182 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84CEFB381E1A9381002F3182 /* GoogleService-Info.plist */; };
+		84CEFB3E1E1A9381002F3182 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB3A1E1A9381002F3182 /* main.m */; };
+		84CEFB431E1A94AD002F3182 /* FireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFB421E1A94AD002F3182 /* FireManager.m */; };
+		84CEFB451E1A94FC002F3182 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84CEFB441E1A94FC002F3182 /* Info.plist */; };
+		84CEFB471E1A9592002F3182 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CEFB461E1A9592002F3182 /* FBSDKLoginKit.framework */; };
+		84CEFB491E1A96E7002F3182 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CEFB481E1A96E7002F3182 /* FBSDKCoreKit.framework */; };
+		84CEFB4B1E1A98DA002F3182 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CEFB4A1E1A98DA002F3182 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A35BBF21DFF7D7800EBA69A /* ITF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A35BBF61DFF7D7800EBA69A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A35BBF81DFF7D7800EBA69A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2A35BBF91DFF7D7800EBA69A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2A35BBFF1DFF7D7800EBA69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A35BC011DFF7D7800EBA69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A35BC041DFF7D7800EBA69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2A35BC061DFF7D7800EBA69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A35BC161DFF83FC00EBA69A /* FacultyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacultyVC.h; path = FacultyVC/FacultyVC.h; sourceTree = "<group>"; };
-		2A35BC171DFF83FC00EBA69A /* FacultyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacultyVC.m; path = FacultyVC/FacultyVC.m; sourceTree = "<group>"; };
-		2A35BC1A1DFF867200EBA69A /* FireManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireManager.h; path = FireManager/FireManager.h; sourceTree = "<group>"; };
-		2A35BC1B1DFF867200EBA69A /* FireManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireManager.m; path = FireManager/FireManager.m; sourceTree = "<group>"; };
 		3127FD381C2DBC8A8B5C9E03 /* Pods-ITF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.debug.xcconfig"; sourceTree = "<group>"; };
 		61FDAAEECF39AFFB03B4E77E /* Pods-ITF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITF.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITF/Pods-ITF.release.xcconfig"; sourceTree = "<group>"; };
-		8440EAAF1E0879D700D3E169 /* StudentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentsVC.h; path = StudentsVC/StudentsVC.h; sourceTree = "<group>"; };
-		8440EAB01E0879D700D3E169 /* StudentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentsVC.m; path = StudentsVC/StudentsVC.m; sourceTree = "<group>"; };
-		8440EAB31E09264400D3E169 /* StudentDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentDetailVC.h; path = StudentDetailVC/StudentDetailVC.h; sourceTree = "<group>"; };
-		8440EAB41E09264400D3E169 /* StudentDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentDetailVC.m; path = StudentDetailVC/StudentDetailVC.m; sourceTree = "<group>"; };
-		848516F51E070F3A0085E822 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		84F064DB1E07310D00CD67AB /* CoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoursesTableViewController.h; path = CoursesVC/CoursesTableViewController.h; sourceTree = "<group>"; };
-		84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoursesTableViewController.m; path = CoursesVC/CoursesTableViewController.m; sourceTree = "<group>"; };
+		84CEFB1F1E1A935C002F3182 /* StartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreen.h; sourceTree = "<group>"; };
+		84CEFB201E1A935C002F3182 /* StartScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreen.m; sourceTree = "<group>"; };
+		84CEFB221E1A935C002F3182 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		84CEFB231E1A935C002F3182 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		84CEFB251E1A935C002F3182 /* FacultyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacultyVC.h; sourceTree = "<group>"; };
+		84CEFB261E1A935C002F3182 /* FacultyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacultyVC.m; sourceTree = "<group>"; };
+		84CEFB281E1A935C002F3182 /* StudentDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentDetailVC.h; sourceTree = "<group>"; };
+		84CEFB291E1A935C002F3182 /* StudentDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailVC.m; sourceTree = "<group>"; };
+		84CEFB2B1E1A935C002F3182 /* StudentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsVC.h; sourceTree = "<group>"; };
+		84CEFB2C1E1A935C002F3182 /* StudentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsVC.m; sourceTree = "<group>"; };
+		84CEFB2E1E1A935C002F3182 /* CoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesTableViewController.h; sourceTree = "<group>"; };
+		84CEFB2F1E1A935C002F3182 /* CoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesTableViewController.m; sourceTree = "<group>"; };
+		84CEFB371E1A9381002F3182 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SupportFiles/AppDelegate.m; sourceTree = "<group>"; };
+		84CEFB381E1A9381002F3182 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SupportFiles/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84CEFB391E1A9381002F3182 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SupportFiles/AppDelegate.h; sourceTree = "<group>"; };
+		84CEFB3A1E1A9381002F3182 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SupportFiles/main.m; sourceTree = "<group>"; };
+		84CEFB411E1A94AD002F3182 /* FireManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireManager.h; sourceTree = "<group>"; };
+		84CEFB421E1A94AD002F3182 /* FireManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireManager.m; sourceTree = "<group>"; };
+		84CEFB441E1A94FC002F3182 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ITF/Info.plist; sourceTree = "<group>"; };
+		84CEFB461E1A9592002F3182 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ITF/Fremworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		84CEFB481E1A96E7002F3182 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		84CEFB4A1E1A98DA002F3182 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DE4A86EC83D34692DF2F23D8 /* libPods-ITF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ITF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,7 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEFB471E1A9592002F3182 /* FBSDKLoginKit.framework in Frameworks */,
+				84CEFB491E1A96E7002F3182 /* FBSDKCoreKit.framework in Frameworks */,
 				2754AF5FF4AEE585FB3BD796 /* libPods-ITF.a in Frameworks */,
+				84CEFB4B1E1A98DA002F3182 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +77,9 @@
 		2774A78A18524B6963761940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84CEFB4A1E1A98DA002F3182 /* Bolts.framework */,
+				84CEFB481E1A96E7002F3182 /* FBSDKCoreKit.framework */,
+				84CEFB461E1A9592002F3182 /* FBSDKLoginKit.framework */,
 				DE4A86EC83D34692DF2F23D8 /* libPods-ITF.a */,
 			);
 			name = Frameworks;
@@ -70,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2A35BBF41DFF7D7800EBA69A /* ITF */,
+				84CEFB441E1A94FC002F3182 /* Info.plist */,
 				2A35BBF31DFF7D7800EBA69A /* Products */,
 				B17E283C23341B23C65CA6E7 /* Pods */,
 				2774A78A18524B6963761940 /* Frameworks */,
@@ -96,12 +116,13 @@
 		2A35BBF51DFF7D7800EBA69A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84CEFB371E1A9381002F3182 /* AppDelegate.m */,
+				84CEFB381E1A9381002F3182 /* GoogleService-Info.plist */,
+				84CEFB391E1A9381002F3182 /* AppDelegate.h */,
+				84CEFB3A1E1A9381002F3182 /* main.m */,
 				2A35BBFE1DFF7D7800EBA69A /* Main.storyboard */,
 				2A35BC011DFF7D7800EBA69A /* Assets.xcassets */,
 				2A35BC031DFF7D7800EBA69A /* LaunchScreen.storyboard */,
-				2A35BC061DFF7D7800EBA69A /* Info.plist */,
-				848516F51E070F3A0085E822 /* GoogleService-Info.plist */,
-				2A35BBF61DFF7D7800EBA69A /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -109,76 +130,93 @@
 		2A35BC0C1DFF7D8400EBA69A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2A35BC191DFF865800EBA69A /* FireManager */,
+				84CEFB401E1A94AD002F3182 /* FireManager */,
 				2A35BC111DFF834000EBA69A /* ViewControllers */,
-				2A35BC0D1DFF7D8B00EBA69A /* AppDelegate */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		2A35BC0D1DFF7D8B00EBA69A /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				2A35BBF81DFF7D7800EBA69A /* AppDelegate.h */,
-				2A35BBF91DFF7D7800EBA69A /* AppDelegate.m */,
-			);
-			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		2A35BC111DFF834000EBA69A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8440EAB21E09262100D3E169 /* StudentDetailVC */,
-				8440EAAE1E0879BA00D3E169 /* StudentsVC */,
-				84F064DA1E0730CD00CD67AB /* CoursesVC */,
-				2A35BC121DFF835800EBA69A /* FacultyVC */,
+				84CEFB1E1E1A935C002F3182 /* StartScreen */,
+				84CEFB211E1A935C002F3182 /* LoginVC */,
+				84CEFB241E1A935C002F3182 /* FacultyVC */,
+				84CEFB271E1A935C002F3182 /* StudentDetailVC */,
+				84CEFB2A1E1A935C002F3182 /* StudentsVC */,
+				84CEFB2D1E1A935C002F3182 /* CoursesVC */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		2A35BC121DFF835800EBA69A /* FacultyVC */ = {
+		84CEFB1E1E1A935C002F3182 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2A35BC161DFF83FC00EBA69A /* FacultyVC.h */,
-				2A35BC171DFF83FC00EBA69A /* FacultyVC.m */,
+				84CEFB1F1E1A935C002F3182 /* StartScreen.h */,
+				84CEFB201E1A935C002F3182 /* StartScreen.m */,
+			);
+			name = StartScreen;
+			path = Classes/ViewController/StartScreen;
+			sourceTree = "<group>";
+		};
+		84CEFB211E1A935C002F3182 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				84CEFB221E1A935C002F3182 /* LoginVC.h */,
+				84CEFB231E1A935C002F3182 /* LoginVC.m */,
+			);
+			name = LoginVC;
+			path = Classes/ViewController/LoginVC;
+			sourceTree = "<group>";
+		};
+		84CEFB241E1A935C002F3182 /* FacultyVC */ = {
+			isa = PBXGroup;
+			children = (
+				84CEFB251E1A935C002F3182 /* FacultyVC.h */,
+				84CEFB261E1A935C002F3182 /* FacultyVC.m */,
 			);
 			name = FacultyVC;
+			path = Classes/ViewController/FacultyVC;
 			sourceTree = "<group>";
 		};
-		2A35BC191DFF865800EBA69A /* FireManager */ = {
+		84CEFB271E1A935C002F3182 /* StudentDetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				2A35BC1A1DFF867200EBA69A /* FireManager.h */,
-				2A35BC1B1DFF867200EBA69A /* FireManager.m */,
-			);
-			name = FireManager;
-			sourceTree = "<group>";
-		};
-		8440EAAE1E0879BA00D3E169 /* StudentsVC */ = {
-			isa = PBXGroup;
-			children = (
-				8440EAAF1E0879D700D3E169 /* StudentsVC.h */,
-				8440EAB01E0879D700D3E169 /* StudentsVC.m */,
-			);
-			name = StudentsVC;
-			sourceTree = "<group>";
-		};
-		8440EAB21E09262100D3E169 /* StudentDetailVC */ = {
-			isa = PBXGroup;
-			children = (
-				8440EAB31E09264400D3E169 /* StudentDetailVC.h */,
-				8440EAB41E09264400D3E169 /* StudentDetailVC.m */,
+				84CEFB281E1A935C002F3182 /* StudentDetailVC.h */,
+				84CEFB291E1A935C002F3182 /* StudentDetailVC.m */,
 			);
 			name = StudentDetailVC;
+			path = Classes/ViewController/StudentDetailVC;
 			sourceTree = "<group>";
 		};
-		84F064DA1E0730CD00CD67AB /* CoursesVC */ = {
+		84CEFB2A1E1A935C002F3182 /* StudentsVC */ = {
 			isa = PBXGroup;
 			children = (
-				84F064DB1E07310D00CD67AB /* CoursesTableViewController.h */,
-				84F064DC1E07310D00CD67AB /* CoursesTableViewController.m */,
+				84CEFB2B1E1A935C002F3182 /* StudentsVC.h */,
+				84CEFB2C1E1A935C002F3182 /* StudentsVC.m */,
+			);
+			name = StudentsVC;
+			path = Classes/ViewController/StudentsVC;
+			sourceTree = "<group>";
+		};
+		84CEFB2D1E1A935C002F3182 /* CoursesVC */ = {
+			isa = PBXGroup;
+			children = (
+				84CEFB2E1E1A935C002F3182 /* CoursesTableViewController.h */,
+				84CEFB2F1E1A935C002F3182 /* CoursesTableViewController.m */,
 			);
 			name = CoursesVC;
+			path = Classes/ViewController/CoursesVC;
+			sourceTree = "<group>";
+		};
+		84CEFB401E1A94AD002F3182 /* FireManager */ = {
+			isa = PBXGroup;
+			children = (
+				84CEFB411E1A94AD002F3182 /* FireManager.h */,
+				84CEFB421E1A94AD002F3182 /* FireManager.m */,
+			);
+			name = FireManager;
+			path = Classes/FireManager;
 			sourceTree = "<group>";
 		};
 		B17E283C23341B23C65CA6E7 /* Pods */ = {
@@ -253,8 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A35BC051DFF7D7800EBA69A /* LaunchScreen.storyboard in Resources */,
-				848516F61E070F3A0085E822 /* GoogleService-Info.plist in Resources */,
+				84CEFB3D1E1A9381002F3182 /* GoogleService-Info.plist in Resources */,
 				2A35BC021DFF7D7800EBA69A /* Assets.xcassets in Resources */,
+				84CEFB451E1A94FC002F3182 /* Info.plist in Resources */,
 				2A35BC001DFF7D7800EBA69A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,13 +353,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8440EAB51E09264400D3E169 /* StudentDetailVC.m in Sources */,
-				2A35BBFA1DFF7D7800EBA69A /* AppDelegate.m in Sources */,
-				84F064DD1E07310D00CD67AB /* CoursesTableViewController.m in Sources */,
-				8440EAB11E0879D700D3E169 /* StudentsVC.m in Sources */,
-				2A35BC1C1DFF867200EBA69A /* FireManager.m in Sources */,
-				2A35BC181DFF83FC00EBA69A /* FacultyVC.m in Sources */,
-				2A35BBF71DFF7D7800EBA69A /* main.m in Sources */,
+				84CEFB301E1A935C002F3182 /* StartScreen.m in Sources */,
+				84CEFB351E1A935C002F3182 /* CoursesTableViewController.m in Sources */,
+				84CEFB341E1A935C002F3182 /* StudentsVC.m in Sources */,
+				84CEFB311E1A935C002F3182 /* LoginVC.m in Sources */,
+				84CEFB331E1A935C002F3182 /* StudentDetailVC.m in Sources */,
+				84CEFB321E1A935C002F3182 /* FacultyVC.m in Sources */,
+				84CEFB3E1E1A9381002F3182 /* main.m in Sources */,
+				84CEFB3C1E1A9381002F3182 /* AppDelegate.m in Sources */,
+				84CEFB431E1A94AD002F3182 /* FireManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +482,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = URR6XT6758;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ITF/Fremworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ITF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,6 +502,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = URR6XT6758;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ITF/Fremworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ITF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
