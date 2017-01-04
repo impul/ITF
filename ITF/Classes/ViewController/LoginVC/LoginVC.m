@@ -10,9 +10,9 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 @import Firebase;
+@import GoogleSignIn;
 
-
-@interface LoginVC () <CAAnimationDelegate>
+@interface LoginVC () <CAAnimationDelegate,GIDSignInDelegate,GIDSignInUIDelegate>
 @end
 
 @implementation LoginVC
@@ -73,6 +73,12 @@
 }
 
 - (IBAction)googleAction:(id)sender {
+    
+    [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
+    [GIDSignIn sharedInstance].delegate = self;
+    [GIDSignIn sharedInstance].uiDelegate = self;
+    [[GIDSignIn sharedInstance] signIn];
+ 
 }
 
 
@@ -99,5 +105,30 @@
     [self.fButton.layer addAnimation:anims forKey:nil];
 }
 
+#pragma mark - Google
+
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+        GIDAuthentication *authentication = user.authentication;
+        FIRAuthCredential *credential = [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
+                                         accessToken:authentication.accessToken];
+        // ...
+    [[FIRAuth auth] signInWithCredential:credential
+                              completion:^(FIRUser *user, NSError *error) {
+                                  UINavigationController *navigation = [self.storyboard instantiateViewControllerWithIdentifier:@"Navigation"];
+                                  [self presentViewController:navigation animated:YES completion:nil];
+                                  if (error) {
+                                      // ...
+                                      return;
+                                  }}];
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations when the user disconnects from app here.
+    // ...
+}
 
 @end

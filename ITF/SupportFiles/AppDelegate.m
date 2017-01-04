@@ -11,6 +11,8 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 @import Firebase;
+@import GoogleSignIn;
+
 @interface AppDelegate ()
 
 @end
@@ -36,8 +38,21 @@
                                                         sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
                                                                annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
                     ];
+    BOOL googleHandled = [[GIDSignIn sharedInstance] handleURL:url
+                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
     // Add any custom logic here.
-    return handled;
+    return handled && googleHandled;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
