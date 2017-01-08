@@ -14,7 +14,6 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
     [self.view layoutIfNeeded];
     [UIView animateWithDuration:0.8 animations:^{
         self.aboutX.constant = 100;
@@ -44,11 +43,11 @@
         UINavigationController *navigation = [self.storyboard instantiateViewControllerWithIdentifier:@"Navigation"];
         [self presentViewController:navigation animated:YES completion:nil];
     }];
-    
 }
 
 - (IBAction)aboutAction:(id)sender {
-  
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutVC"];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (IBAction)loginAction:(id)sender {

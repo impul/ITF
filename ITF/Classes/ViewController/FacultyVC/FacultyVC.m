@@ -10,8 +10,10 @@
 #import "FacultyVC.h"
 #import "FireManager.h"
 #import "CoursesTableViewController.h"
+#import "AddUserVC.h"
 
 @interface FacultyVC ()
+@property (weak, nonatomic) IBOutlet UIButton *userButton;
 @property (strong ,nonatomic) FIRDataSnapshot *snapShot;
 @property (strong ,nonatomic) FIRDatabaseReference *fir;
 @property (strong ,nonatomic) NSDictionary *ITFdict;
@@ -27,7 +29,7 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     FIRDatabaseReference *scoresRef = [[FIRDatabase database] referenceWithPath:@"ITF"];
     [scoresRef keepSynced:YES];
-
+    [self upldateUser];
     [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
          self.ITFdict = [snapshot.value objectForKey:@"ITF"];
         [self.tableView reloadData];
@@ -38,6 +40,37 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
      [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
+-(void)upldateUser {
+    if ([[FIRAuth auth] currentUser].email.length) {
+        [self.userButton setTitle:[[FIRAuth auth] currentUser].email forState:UIControlStateNormal] ;
+    } else {
+        [self.userButton setTitle:@"Login" forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)userAction:(id)sender {
+    if ([[self.userButton titleForState:UIControlStateNormal] isEqualToString:@"Login"]) {
+        UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+        [self presentViewController:controller animated:NO completion:nil];
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ITF" message:[self.userButton titleForState:UIControlStateNormal] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *addUser = [UIAlertAction actionWithTitle:@"Add user" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            AddUserVC *addUser = [self.storyboard instantiateViewControllerWithIdentifier:@"AddUserVC"];
+            addUser.dictOfITF = self.ITFdict;
+            [self presentViewController:addUser animated:YES completion:nil];
+        }];
+        UIAlertAction *logout = [UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [[FIRAuth auth] signOut:nil];
+            [self upldateUser];
+        }];
+        UIAlertAction *back = [UIAlertAction actionWithTitle:@"Back" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:addUser];
+        [alertController addAction:logout];
+        [alertController addAction:back];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - TableView
@@ -61,6 +94,8 @@
 }
 
 #pragma mark - Private
+
+
 
 -(void)generateUsers {
     for (int j = 0 ; j < 5; j++) {
