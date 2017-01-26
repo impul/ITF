@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FireManager.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 @import Firebase;

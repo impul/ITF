@@ -35,8 +35,8 @@
 
 - (IBAction)addUserAction:(id)sender {
     FIRDatabaseReference *fir = [[FIRDatabase database] reference];
-    [[[[[[fir child:@"ITF"] child:self.facultyTextField.text] child:@"Courses"] child:self.coursTextField.text]childByAutoId] setValue:@{@"Name":self.userNameTextField.text} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+    [[[[[[fir child:@"ITF"] child:self.facultyTextField.text] child:@"Courses"] child:[self.coursTextField.text substringToIndex:1]]childByAutoId] setValue:@{@"Name":self.userNameTextField.text} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        [self.delegate returnRefProtocol:ref];
     }];
 
 }

@@ -8,11 +8,11 @@
 //
 
 #import "FacultyVC.h"
-#import "FireManager.h"
 #import "CoursesTableViewController.h"
 #import "AddUserVC.h"
+@import Firebase;
 
-@interface FacultyVC ()
+@interface FacultyVC () <ReturnRefProtocol>
 @property (weak, nonatomic) IBOutlet UIButton *userButton;
 @property (strong ,nonatomic) FIRDataSnapshot *snapShot;
 @property (strong ,nonatomic) FIRDatabaseReference *fir;
@@ -59,6 +59,7 @@
         UIAlertAction *addUser = [UIAlertAction actionWithTitle:@"Add user" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             AddUserVC *addUser = [self.storyboard instantiateViewControllerWithIdentifier:@"AddUserVC"];
             addUser.dictOfITF = self.ITFdict;
+            addUser.delegate = self;
             [self presentViewController:addUser animated:YES completion:nil];
         }];
         UIAlertAction *logout = [UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -93,6 +94,18 @@
     [self.navigationController pushViewController:coursesTVC animated:YES];
 }
 
+#pragma mark - ReturnRefProtocol
+
+-(void)returnRefProtocol:(FIRDatabaseReference *)ref {
+    [self.fir observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        self.ITFdict = [snapshot.value objectForKey:@"ITF"];
+        [self.tableView reloadData];
+    }];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 #pragma mark - Private
 
 
@@ -117,7 +130,7 @@
                 NSString *dis4 = [self getRandomDis];
                 NSString *dis5 = [self getRandomDis];
                 NSString *dis6 = [self getRandomDis];
-    NSString *dis7 = [self getRandomDis];
+                NSString *dis7 = [self getRandomDis];
                 for (int z = 0 ; z < allStudentInCourse.count; z++) {
                     NSString *stud = allStudentInCourse[z];
                     NSString *course = [NSString stringWithFormat:@"5"];

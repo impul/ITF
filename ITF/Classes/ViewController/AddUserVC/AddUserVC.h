@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Firebase;
+
+@protocol ReturnRefProtocol <NSObject>
+
+-(void)returnRefProtocol:(FIRDatabaseReference *)ref;
+
+@end
 
 @interface AddUserVC : UIViewController
 @property (strong, nonatomic) NSDictionary *dictOfITF;
+@property (weak, nonatomic) id <ReturnRefProtocol> delegate;
 @end

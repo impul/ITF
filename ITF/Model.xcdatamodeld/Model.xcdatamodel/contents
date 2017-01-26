@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
+        <attribute name="faculty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="facultyOfCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="coursesInFaculty" inverseEntity="Faculty" syncable="YES"/>
+        <relationship name="studentOfCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="courseOfStudent" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Faculty" representedClassName="Faculty" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="coursesInFaculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="facultyOfCourse" inverseEntity="Course" syncable="YES"/>
+        <relationship name="studentOfFaculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="facultyOfStudent" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="studentOfLesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="faculty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courseOfStudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="studentOfCourse" inverseEntity="Course" syncable="YES"/>
+        <relationship name="facultyOfStudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="studentOfFaculty" inverseEntity="Faculty" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Faculty" positionX="-324" positionY="-81" width="128" height="88"/>
+        <element name="Course" positionX="-74" positionY="-90" width="128" height="103"/>
+        <element name="Student" positionX="-326" positionY="71" width="128" height="118"/>
+        <element name="Lesson" positionX="-74" positionY="30" width="128" height="88"/>
+    </elements>
+</model>
